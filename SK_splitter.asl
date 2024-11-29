@@ -49,7 +49,7 @@ start
 
 split 
 {
-    return old.MissionState == vars.MissionStates.InProcess && current.MissionState == vars.MissionStates.Complete;
+    return old.MissionTime < current.MissionTime &&old.MissionState == vars.MissionStates.InProcess && current.MissionState == vars.MissionStates.Complete;
 }
 
 reset 
